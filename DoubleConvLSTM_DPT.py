@@ -16,7 +16,7 @@ from sklearn.metrics import (accuracy_score, confusion_matrix,
 ######################   Preprocess Dataset   ########################
 ######################################################################
 
-fileName = "BTC_ETH_4h.csv"
+fileName = "BTC_ETH_1d.csv"
 altName = "ETH"
 
 all_data = pd.read_csv(fileName)
