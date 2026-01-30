@@ -145,9 +145,9 @@ def build_model(input_shape: Tuple[int, int], lr: float) -> tf.keras.Model:
     model = Sequential(
         [
             Input(shape=input_shape),
-            Conv1D(filters=16, kernel_size=3, padding="causal", activation="relu"),
+            Conv1D(filters=1, kernel_size=1, padding="causal", activation="relu"),
             LSTM(128, return_sequences=True),
-            Conv1D(filters=16, kernel_size=3, padding="causal", activation="relu"),
+            Conv1D(filters=1, kernel_size=1, padding="causal", activation="relu"),
             LSTM(64, return_sequences=False),
             Dropout(0.2),
             Dense(16, activation="relu", kernel_initializer="he_uniform"),
